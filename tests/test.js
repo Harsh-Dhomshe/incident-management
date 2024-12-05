@@ -16,7 +16,7 @@ describe('Test The GET Endpoints', () => {
   it('Should check Customers', async () => {
     const processorService = await cds.connect.to('ProcessorService')
     const { Customers } = processorService.entities
-    expect(await SELECT.from(Customers)).to.have.length(3)
+    expect(await SELECT.from(Customers)).to.have.length(4) //changing length to 4 to add new customer : Harsh
   })
 
   it('Test Expand Entity Endpoint', async () => {
